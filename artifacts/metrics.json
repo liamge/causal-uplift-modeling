@@ -1,0 +1,27 @@
+{
+  "rows_train": 8400,
+  "rows_test": 3600,
+  "avg_pred_uplift_test": 0.09494964105979115,
+  "approx_qini_auc": 116.05654756694086,
+  "recommended_customers_at_default_budget": 1388,
+  "expected_net_value_at_default_budget": 27723.246777454886,
+  "feature_columns": [
+    "age",
+    "tenure_months",
+    "monthly_spend",
+    "support_tickets_90d",
+    "email_engagement",
+    "prior_discount_user",
+    "region_north",
+    "region_south",
+    "region_west",
+    "segment_smallbiz",
+    "segment_enterprise"
+  ],
+  "business": {
+    "conversion_value": 180.0,
+    "treatment_cost": 18.0,
+    "annual_margin": 120.0,
+    "default_budget": 25000.0
+  }
+}
