@@ -27,6 +27,11 @@ model:
   outcome_column: outcome
   id_column: customer_id
   train_size: 0.7
+  learner_type: t
+  compare_learners:
+    - t
+    - x
+    - dr
 
 business:
   conversion_value: 180.0

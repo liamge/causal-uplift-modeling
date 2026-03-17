@@ -1,0 +1,51 @@
+project:
+  name: causal-uplift-roi-dashboard-marketing
+  random_state: 42
+
+paths:
+  raw_marketing_path: data/marketing_campaign.csv
+  data_path: data/marketing_uplift.csv
+  artifact_dir: artifacts_marketing
+
+model:
+  feature_columns:
+    - income
+    - recency
+    - total_spend
+    - numwebpurchases
+    - numstorepurchases
+    - numcatalogpurchases
+    - numdealspurchases
+    - numwebvisitsmonth
+    - children
+    - high_recency
+    - web_loyal
+    - store_loyal
+    - catalog_engaged
+    - deal_engaged
+    - web_heavy
+    - married
+    - single
+    - education_phd
+    - education_master
+    - education_graduation
+    - accepted_any_prior
+    - prior_accepts
+    - response_last_campaign
+    - campaign_touch_total
+    - revenue_band
+  treatment_column: treatment
+  outcome_column: outcome
+  id_column: customer_id
+  train_size: 0.75
+  learner_type: t
+  compare_learners:
+    - t
+    - x
+    - dr
+
+business:
+  conversion_value: 250.0
+  treatment_cost: 25.0
+  annual_margin: 160.0
+  default_budget: 75000.0

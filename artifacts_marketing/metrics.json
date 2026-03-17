@@ -1,0 +1,62 @@
+{
+  "feature_columns": [
+    "income",
+    "recency",
+    "total_spend",
+    "numwebpurchases",
+    "numstorepurchases",
+    "numcatalogpurchases",
+    "numdealspurchases",
+    "numwebvisitsmonth",
+    "children",
+    "high_recency",
+    "web_loyal",
+    "store_loyal",
+    "catalog_engaged",
+    "deal_engaged",
+    "web_heavy",
+    "married",
+    "single",
+    "education_phd",
+    "education_master",
+    "education_graduation",
+    "accepted_any_prior",
+    "prior_accepts",
+    "response_last_campaign",
+    "campaign_touch_total",
+    "revenue_band"
+  ],
+  "business": {
+    "conversion_value": 250.0,
+    "treatment_cost": 25.0,
+    "annual_margin": 160.0,
+    "default_budget": 75000.0
+  },
+  "primary_learner": "x",
+  "learners": {
+    "t": {
+      "rows_train": 1662,
+      "rows_test": 554,
+      "avg_pred_uplift_test": 0.15328055329626947,
+      "approx_qini_auc": 39.582733282212246,
+      "recommended_customers_at_default_budget": 369,
+      "expected_net_value_at_default_budget": 9289.995274766443
+    },
+    "x": {
+      "rows_train": 1662,
+      "rows_test": 554,
+      "avg_pred_uplift_test": 0.13389572633240895,
+      "approx_qini_auc": 40.64897037241555,
+      "recommended_customers_at_default_budget": 327,
+      "expected_net_value_at_default_budget": 8745.536561413684
+    },
+    "dr": {
+      "rows_train": 1662,
+      "rows_test": 554,
+      "avg_pred_uplift_test": 0.13671788621428743,
+      "approx_qini_auc": 40.199661452874224,
+      "recommended_customers_at_default_budget": 315,
+      "expected_net_value_at_default_budget": 13144.847481676572
+    }
+  }
+}
