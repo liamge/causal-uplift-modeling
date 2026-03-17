@@ -1,0 +1,35 @@
+project:
+  name: causal-uplift-roi-dashboard
+  random_state: 42
+
+paths:
+  data_path: data/simulated_campaign.csv
+  artifact_dir: artifacts
+
+simulation:
+  n_samples: 12000
+  treatment_rate: 0.5
+
+model:
+  feature_columns:
+    - age
+    - tenure_months
+    - monthly_spend
+    - support_tickets_90d
+    - email_engagement
+    - prior_discount_user
+    - region_north
+    - region_south
+    - region_west
+    - segment_smallbiz
+    - segment_enterprise
+  treatment_column: treatment
+  outcome_column: outcome
+  id_column: customer_id
+  train_size: 0.7
+
+business:
+  conversion_value: 180.0
+  treatment_cost: 18.0
+  annual_margin: 120.0
+  default_budget: 25000.0
