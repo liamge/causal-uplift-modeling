@@ -3,4 +3,7 @@ __pycache__/
 .pytest_cache/
 data/
 *.joblib
+# Keep trained model artifacts in version control so Streamlit Cloud can load them
+!artifacts/*.joblib
+!artifacts_marketing/*.joblib
 *.pyc
